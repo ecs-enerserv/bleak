@@ -452,7 +452,7 @@ class BlueZManager:
                                 )
                             )
                             assert_reply(reply)
-
+                        self._bus.disconnect()
                 return stop
             except BaseException:
                 # if starting scanning failed, don't leak the callbacks
